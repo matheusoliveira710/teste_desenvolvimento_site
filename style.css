@@ -1,25 +1,40 @@
 body {
     background-color: black;
 }
+
 h1 {
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     font-size: 22px;
 }
+
 h2 {
-    font-size: 12px;
+    font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
 }
+
+main p {
+    color: white;
+    font-size: 14px;
+}
+
+main h2 {
+    color:lightseagreen ;
+}
+
 p {
     color: white;
-    font-size: 16px;
+    font-size: 14px;
+    color: tomato;
 }
+
 footer {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 10px;
     color: white;
 }
+
 h3 {
     font-size: 12px;
     font-family: Arial, Helvetica, sans-serif;
