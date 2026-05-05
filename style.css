@@ -24,6 +24,17 @@ main h2 {
     color:white ;
 }
 
+main p2 {
+    color: white;
+    font-size: 19px;
+}
+
+main a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+
 p {
     color: white;
     font-size: 19px;
