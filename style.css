@@ -54,7 +54,3 @@ section a {
     font-size: 18px;
     margin-right: 15px;
 }
-
-@media (max-width: 768px) {
-    font-size: ;
-}
