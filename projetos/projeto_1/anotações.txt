@@ -1,14 +1,50 @@
 criado o html do Kanban:
 
-adicionado:
+✅ Funcionalidades já implementadas:
 
 - Botão de novas tarefas e incluso (
     estilizado os botoês de nova tarefa e os botões dentro da tarefa
 )
 
-Falta adicionar:
+- 💾 localStorage {
+    Salvar tarefas automaticamente no navegador
+}
 
-- Drag and Drop (arrastar)
-- adicionar prioridade (alta, média e baixa)
+- adicionado prioridade (alta, média e baixa)
+
 - data de entrega
 
+- movimentação entre colunas (tarefas)
+
+Em Andamento:
+
+- LocalStorage
+
+- 
+
+🚧 Próximas funcionalidades planejadas
+
+- 🖱️ Drag and Drop {
+    Arrastar tarefas entre colunas
+}
+
+- 📱 Responsividade {
+    Melhor adaptação para dispositivos móveis
+}
+
+🎯 Objetivo do Projeto
+
+Aprender na prática:
+
+- HTML
+- CSS
+- JavaScript
+- Manipulação do DOM
+- Estrutura de dados
+- Lógica de programação
+- Desenvolvimento Frontend
+- Arquitetura de aplicações web
+
+👨‍💻 Desenvolvedor
+
+Matheus Oliveira - 2026
