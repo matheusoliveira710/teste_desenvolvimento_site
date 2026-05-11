@@ -9,7 +9,6 @@ h1 {
 
 p {
     color: whitesmoke;
-    font-size: 40px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -17,3 +16,73 @@ main p {
     color: white;
     font-size: 16px;
 }
+
+.kanban {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    color: white;
+}
+
+.coluna {
+    background-color: #1e1e1e;
+    width: 300px;
+    min-height: 500px;
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+}
+
+.card {
+    background-color: #2d2d2d;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    color: white;
+    transition: 0.3s;
+}
+
+.card button {
+    margin-top: 10px;
+    margin-right: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+main {
+    text-align: center;
+}
+
+.criarTarefa {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.criarTarefa:hover {
+    transform: scale(1.05);
+}
+
+.alta {
+    border-left: 8px solid red;
+}
+
+.media {
+    border-left: 8px solid yellow;
+}
+
+.baixa {
+    border-left: 8px solid green;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px rgba(255,255,255,0.2);
+}
+

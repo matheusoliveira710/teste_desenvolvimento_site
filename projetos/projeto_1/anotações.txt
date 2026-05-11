@@ -1,0 +1,14 @@
+criado o html do Kanban:
+
+adicionado:
+
+- Botão de novas tarefas e incluso (
+    estilizado os botoês de nova tarefa e os botões dentro da tarefa
+)
+
+Falta adicionar:
+
+- Drag and Drop (arrastar)
+- adicionar prioridade (alta, média e baixa)
+- data de entrega
+

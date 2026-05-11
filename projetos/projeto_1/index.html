@@ -10,19 +10,32 @@
     <h1>
         Projeto Kanban - Gerenciamento de Tarefas
     </h1>
-    <p>
-        A fazer
-    </p>
-    <p>
-        Em andamento
-    </p>
-    <p>
-        Concluído
-    </p>
+    <section class="kanban">
+        <div class="coluna" id="a-fazer">
+            <h2>A Fazer</h2>
+        </div>
+        <div class="coluna" id="em-andamento">
+            <h2>Em andamento</h2>
+        </div>
+        <div class="coluna" id="concluido">
+            <h2>Concluído</h2>
+        </div>
+    </section>
     <main>
         <p>
-            <a href="https://matheusoliveira710.github.io/teste_desenvolvimento_site/index.html" target="_blank">Voltar</a>
+            <a href="https://matheusoliveira710.github.io/teste_desenvolvimento_site/index.html" target="_blank">
+                Voltar
+            </a>
         </p>
+        <button class="criarTarefa" onclick="criarTarefa()">
+            Nova tarefa
+        </button>
     </main>
+    <script src="script.js">
+
+    </script>
+    <footer>
+        &copy; Desenvolvido por Matheus - 2026
+    </footer>
 </body>
 </html>
