@@ -27,6 +27,8 @@ function criarCard(tarefa) {
 
     let card = document.createElement("div");
 
+    card.dataset.id = tarefa.id;
+
     card.classList.add("card", classePrioridade);
 
     card.innerHTML = `
@@ -76,6 +78,8 @@ function criarTarefa(){
 
     let tarefa = {
 
+        id: Date.now(),
+
         nome: nomeTarefa,
 
         prioridade: prioridade,
@@ -100,22 +104,31 @@ function criarTarefa(){
 function editarTarefa(botao){
     let card = botao.parentElement;
     
-    let titulo = card.querySelector("h3");
+    let id = Number(card.dataset.id);
 
-    let novoNome = prompt("Editar tarefa: ", titulo.textContent);
+    let tarefa = tarefas.find(function(t) {
+        return t.id === id;
+    });
+
+    let novoNome = prompt("Editar tarefa: ", tarefa.nome);
 
     if (novoNome === null || novoNome === "") {
         return
     }
 
-    titulo.textContent = novoNome;
+    tarefa.nome = novoNome;
+    card.querySelector("h3").textContent = novoNome;
+    localStorage.setItem(
+        "tarefas",
+        JSON.stringify(tarefas)
+    );
 }
 
 function excluirTarefa(botao){
     let card = botao.parentElement;
-    let titulo = card.querySelector("h3").textContent;
+    let id = Number(card.dataset.id);
     tarefas = tarefas.filter(function(tarefa) {
-        return tarefa.nome !== titulo;
+        return tarefa.id !== id;
     });
     localStorage.setItem(
         "tarefas",
@@ -127,9 +140,9 @@ function excluirTarefa(botao){
 function moverTarefa(botao) {
     let card = botao.parentElement;
     let colunaAtual = card.parentElement.id;
-    let titulo = card.querySelector("h3").textContent;
+    let id = Number(card.dataset.id);
     let tarefa = tarefas.find(function(t) {
-        return t.nome === titulo;
+        return t.id === id;
     });
     if (colunaAtual === "a-fazer") {
         tarefa.status = "em-andamento";
@@ -145,11 +158,37 @@ function moverTarefa(botao) {
 }
 
 function voltarTarefa(botao) {
+
     let card = botao.parentElement;
+
     let colunaAtual = card.parentElement.id;
+
+    let id = Number(card.dataset.id);
+
+    let tarefa = tarefas.find(function(t) {
+
+        return t.id === id;
+    });
+
     if (colunaAtual === "em-andamento") {
-        document.getElementById("a-fazer").appendChild(card);
+
+        tarefa.status = "a-fazer";
+
+        document
+            .getElementById("a-fazer")
+            .appendChild(card);
+
     } else if (colunaAtual === "concluido") {
-        document.getElementById("em-andamento").appendChild(card);
+
+        tarefa.status = "em-andamento";
+
+        document
+            .getElementById("em-andamento")
+            .appendChild(card);
     }
+
+    localStorage.setItem(
+        "tarefas",
+        JSON.stringify(tarefas)
+    );
 }

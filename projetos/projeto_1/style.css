@@ -1,10 +1,16 @@
 body {
-    background-color: black;
+    background-color: rgb(121, 43, 43);
 }
 
 h1 {
     color: whitesmoke;
     text-align: center;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: white;
 }
 
 p {
@@ -85,4 +91,3 @@ main {
     transform: scale(1.02);
     box-shadow: 0 0 10px rgba(255,255,255,0.2);
 }
-
