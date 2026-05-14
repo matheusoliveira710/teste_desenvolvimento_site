@@ -7,35 +7,109 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <h1>
         Projeto Kanban - Gerenciamento de Tarefas
     </h1>
-    <section class="kanban">
-        <div class="coluna" id="a-fazer">
-            <h2>A Fazer</h2>
+
+    <!-- FORMULÁRIO -->
+    <section class="formulario">
+
+        <div class="campo">
+
+            <label>
+                Nome da tarefa
+            </label>
+
+            <input
+                type="text"
+                id="nome"
+                placeholder="Digite a tarefa"
+            >
+
         </div>
-        <div class="coluna" id="em-andamento">
-            <h2>Em andamento</h2>
+
+        <div class="campo">
+
+            <label>
+                Prazo
+            </label>
+
+            <input
+                type="date"
+                id="prazo"
+            >
+
         </div>
-        <div class="coluna" id="concluido">
-            <h2>Concluído</h2>
+
+        <div class="campo">
+
+            <label>
+                Prioridade
+            </label>
+
+            <select id="prioridade">
+
+                <option value="alta">
+                    Alta
+                </option>
+
+                <option value="média">
+                    Média
+                </option>
+
+                <option value="baixa">
+                    Baixa
+                </option>
+
+            </select>
+
         </div>
+
+        <button onclick="criarTarefa()">
+            Criar tarefa
+        </button>
+
     </section>
+
+    <!-- KANBAN -->
+    <section class="kanban">
+
+        <div class="coluna" id="a-fazer">
+            <h2 id="titulo-a-fazer">
+                A Fazer (0)
+            </h2>
+        </div>
+
+        <div class="coluna" id="em-andamento">
+            <h2 id="titulo-em-andamento">
+                Em andamento (0)
+            </h2>
+        </div>
+
+        <div class="coluna" id="concluido">
+            <h2 id="titulo-concluido">
+                Concluído (0)
+            </h2>
+        </div>
+
+    </section>
+
     <main>
+
         <p>
             <a href="https://matheusoliveira710.github.io/teste_desenvolvimento_site/index.html" target="_blank">
                 Voltar
             </a>
         </p>
-        <button class="criarTarefa" onclick="criarTarefa()">
-            Nova tarefa
-        </button>
-    </main>
-    <script src="script.js">
 
-    </script>
+    </main>
+
+    <script src="script.js"></script>
+
     <footer>
         &copy; Desenvolvido por Matheus - 2026
     </footer>
+
 </body>
 </html>

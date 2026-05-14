@@ -6,6 +6,7 @@ if (tarefasSalvas) {
     tarefas.forEach(function(tarefa) {
         criarCard(tarefa);
     });
+    atualizarContadores();
 }
 
 function criarCard(tarefa) {
@@ -59,20 +60,33 @@ function criarCard(tarefa) {
     document.getElementById(tarefa.status).appendChild(card);
 }
 
+function atualizarContadores() {
+    
+    let fazer = document.querySelectorAll("#a-fazer .card").length;
+    
+    let andamento = document.querySelectorAll("#em-andamento .card").length;
+    
+    let concluido = document.querySelectorAll("#concluido .card").length;
+    
+    document.getElementById("titulo-a-fazer").textContent = `A Fazer (${fazer})`;
+    
+    document.getElementById("titulo-em-andamento").textContent = `Em andamento (${andamento})`;
+    
+    document.getElementById("titulo-concluido").textContent = `Concluído (${concluido})`;
+}
+
 function criarTarefa(){
 
-    let nomeTarefa = prompt("Digite o nome da tarefa: ");
+    let nomeTarefa =
+        document.getElementById("nome").value;
 
-    let prioridade = prompt(
-        "Digite a prioridade: alta, média ou baixa"
-    );
+    let prioridade =
+        document.getElementById("prioridade").value;
 
-    let prazoTarefa = prompt(
-        "Digite o prazo da tarefa: "
-    );
+    let prazoTarefa =
+        document.getElementById("prazo").value;
 
-    if (nomeTarefa === null || nomeTarefa === "") {
-
+    if (nomeTarefa === "") {
         return;
     }
 
@@ -99,6 +113,14 @@ function criarTarefa(){
     console.log(tarefas);
 
     criarCard(tarefa);
+
+    atualizarContadores();
+
+    document.getElementById("nome").value = "";
+
+    document.getElementById("prazo").value = "";
+
+    document.getElementById("prioridade").value = "alta";
 }
 
 function editarTarefa(botao){
@@ -125,6 +147,15 @@ function editarTarefa(botao){
 }
 
 function excluirTarefa(botao){
+
+    let confirmar = confirm(
+    "Deseja excluir essa tarefa?"
+    );
+
+    if (!confirmar) {
+        return;
+    }
+
     let card = botao.parentElement;
     let id = Number(card.dataset.id);
     tarefas = tarefas.filter(function(tarefa) {
@@ -135,6 +166,7 @@ function excluirTarefa(botao){
         JSON.stringify(tarefas)
     );
     card.remove();
+    atualizarContadores();
 }
 
 function moverTarefa(botao) {
@@ -155,6 +187,7 @@ function moverTarefa(botao) {
         "tarefas",
         JSON.stringify(tarefas)
     );
+    atualizarContadores();
 }
 
 function voltarTarefa(botao) {
@@ -191,4 +224,5 @@ function voltarTarefa(botao) {
         "tarefas",
         JSON.stringify(tarefas)
     );
+    atualizarContadores();
 }

@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(121, 43, 43);
+    background-color: rgb(192, 129, 129);
 }
 
 h1 {
@@ -9,7 +9,7 @@ h1 {
 
 footer {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 30px;
     color: white;
 }
 
@@ -90,4 +90,71 @@ main {
 .card:hover {
     transform: scale(1.02);
     box-shadow: 0 0 10px rgba(255,255,255,0.2);
+}
+
+/* FORMULÁRIO */
+
+.formulario {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: end;
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+
+    flex-wrap: wrap;
+}
+
+.campo {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+.campo label {
+
+    color: white;
+
+    margin-bottom: 5px;
+
+    font-size: 14px;
+}
+
+.formulario input,
+.formulario select {
+
+    padding: 10px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    outline: none;
+}
+
+.formulario button {
+
+    padding: 10px 20px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background-color: #4CAF50;
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.formulario button:hover {
+
+    transform: scale(1.05);
 }
