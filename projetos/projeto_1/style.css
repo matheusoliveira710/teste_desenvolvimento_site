@@ -226,3 +226,27 @@ main {
 
     gap: 10px;
 }
+
+.pesquisa {
+
+    text-align: center;
+
+    margin-bottom: 20px;
+}
+
+.pesquisa input {
+
+    width: 300px;
+
+    padding: 10px;
+
+    border-radius: 5px;
+
+    border: none;
+
+    font-size: 16px;
+}
+
+#pesquisa {
+    max-width: 220px;
+}

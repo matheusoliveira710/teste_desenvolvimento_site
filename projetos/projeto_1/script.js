@@ -239,3 +239,16 @@ function voltarTarefa(botao) {
     );
     atualizarContadores();
 }
+
+function pesquisarTarefa() {
+    let textoPesquisa = document.getElementById("pesquisa").value.toLowerCase();
+    let cards = document.querySelectorAll(".card");
+    cards.forEach(function(card) {
+        let nomeTarefa = card.querySelector("h3").textContent.toLowerCase();
+        if (nomeTarefa.includes(textoPesquisa)) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+}

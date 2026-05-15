@@ -10,6 +10,10 @@ criado o html do Kanban:
     Salvar tarefas automaticamente no navegador
 }
 
+- 📱 Responsividade {
+    Melhor adaptação para dispositivos móveis
+}
+
 - adicionado prioridade (alta, média e baixa)
 
 - data de entrega
@@ -18,7 +22,7 @@ criado o html do Kanban:
 
 Em Andamento:
 
-- 
+- Pesquisa e Filtro
 
 🚧 Próximas funcionalidades planejadas
 
@@ -26,9 +30,7 @@ Em Andamento:
     Arrastar tarefas entre colunas
 }
 
-- 📱 Responsividade {
-    Melhor adaptação para dispositivos móveis
-}
+- 
 
 🎯 Objetivo do Projeto
 
