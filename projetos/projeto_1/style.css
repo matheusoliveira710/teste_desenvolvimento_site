@@ -100,13 +100,15 @@ main {
 
     justify-content: center;
 
-    align-items: end;
+    align-items: center;
 
-    gap: 15px;
+    gap: 10px;
 
     margin-bottom: 30px;
 
     flex-wrap: wrap;
+
+    margin-bottom: 20px;
 }
 
 .campo {
@@ -126,15 +128,13 @@ main {
 }
 
 .formulario input,
-.formulario select {
+.formulario select, .formulario button {
 
     padding: 10px;
 
     border: none;
 
     border-radius: 5px;
-
-    outline: none;
 }
 
 .formulario button {
@@ -151,7 +151,7 @@ main {
 
     cursor: pointer;
 
-    transition: 0.3s;
+    height: 40px;
 }
 
 .formulario button:hover {
@@ -186,4 +186,43 @@ main {
 
         width: 90%;
     }
+}
+
+.data-hora {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.data-hora p {
+    margin: 0;
+}
+
+.campo {
+
+    display: flex;
+
+    flex-direction: column;
+
+    color: white;
+}
+
+.campo input,
+.campo select {
+
+    padding: 10px;
+
+    border-radius: 5px;
+
+    border: none;
+
+    min-width: 180px;
+}
+
+.data-hora-inputs {
+
+    display: flex;
+
+    gap: 10px;
 }

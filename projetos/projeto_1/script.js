@@ -38,7 +38,13 @@ function criarCard(tarefa) {
 
         <p>📅 ${tarefa.prazo}</p>
 
-        <p>🔥 ${tarefa.prioridade}</p>
+        <div class="data-hora">
+        
+            <p>🕒 ${tarefa.hora}</p>
+
+            <p>🔥 ${tarefa.prioridade}</p>
+        
+        </div>
 
         <button onclick="moverTarefa(this)">
             ➡ Mover
@@ -86,6 +92,9 @@ function criarTarefa(){
     let prazoTarefa =
         document.getElementById("prazo").value;
 
+    let horaTarefa =
+        document.getElementById("hora").value;
+
     if (nomeTarefa === "") {
         return;
     }
@@ -99,6 +108,8 @@ function criarTarefa(){
         prioridade: prioridade,
 
         prazo: prazoTarefa,
+
+        hora: horaTarefa,
 
         status: "a-fazer"
     };
@@ -119,6 +130,8 @@ function criarTarefa(){
     document.getElementById("nome").value = "";
 
     document.getElementById("prazo").value = "";
+
+    document.getElementById("hora").value = "";
 
     document.getElementById("prioridade").value = "alta";
 }
