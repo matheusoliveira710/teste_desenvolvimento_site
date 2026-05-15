@@ -177,14 +177,44 @@ main {
 
         flex-direction: column;
 
-        align-items: center;
+        align-items: stretch;
+
+        width: 100%;
+
+        padding: 10px;
     }
 
-    .formulario input,
-    .formulario select,
+    .campo {
+
+        width: 100%;
+    }
+
+    .campo input,
+    .campo select {
+
+        width: 100%;
+    }
+
+    .data-hora-inputs {
+
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+    .data-hora-inputs input {
+
+        width: 100%;
+    }
+
+    #pesquisa {
+
+        width: 100%;
+    }
+
     .formulario button {
 
-        width: 90%;
+        width: 100%;
     }
 }
 
