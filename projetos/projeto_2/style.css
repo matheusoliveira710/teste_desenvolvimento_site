@@ -1,5 +1,8 @@
 body {
-    background-color: black;
+    background-color: #111;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: whitesmoke;
 }
 
 h1 {
