@@ -1,8 +1,6 @@
 body {
     background-color: #111;
     font-family: Arial, sans-serif;
-    text-align: center;
-    color: whitesmoke;
 }
 
 h1 {
@@ -22,4 +20,8 @@ a{
 
 a:hover {
     text-decoration: underline;
+}
+
+button {
+    height: 60px;
 }
