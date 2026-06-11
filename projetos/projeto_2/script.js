@@ -22,6 +22,5 @@ botoes.forEach(botao => {
     else {
         visor.value = botao.textContent
     }
-
-    console.log("Apagar!");
 });
+    console.log("Apagar!");
