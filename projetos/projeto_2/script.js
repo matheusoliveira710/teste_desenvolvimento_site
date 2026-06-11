@@ -10,4 +10,18 @@ botoes.forEach(botao => {
                 visor.value += botao.textContent;
             }
     });
+
+    if (botao.textContent === "⌫") {
+        visor.value = "";
+    }
+
+    else if (botao.textContent === "⌫") {
+        visor.value = visor.value.slice(0, -1);
+    }
+
+    else {
+        visor.value = botao.textContent
+    }
+
+    console.log("Apagar!");
 });
