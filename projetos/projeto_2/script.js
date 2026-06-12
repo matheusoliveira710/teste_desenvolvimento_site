@@ -10,7 +10,7 @@ botoes.forEach(botao => {
                 visor.value = "";   
             }
             else if (botao.textContent === "=") {
-                visor.value = visor.value.slice(0, +1);
+                visor.value = eval(visor.value);
             }
             else {
                 visor.value += botao.textContent;
