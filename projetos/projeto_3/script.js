@@ -17,12 +17,12 @@ function converter() {
             console.log("API funcionando!");
             const brl = data.data.BRL;
             const cotacao = data.data[moeda];
+            const valorEmUSD = valor / brl;
+            const valorConvertido = valorEmUSD * cotacao;
+            console.log(valorConvertido);
             console.log("BRL:", data.data.BRL);
             console.log("Moeda:", moeda);
             console.log("Cotação:", cotacao);
-            console.log(valor / brl);
-            console.log(valor / cotacao);
+            resultado.textContent = `Convertendo R$${valor} para ${moeda}: ${valorConvertido.toFixed(2)}`;
         });
-    //parsefloat("")
-    resultado.textContent = `Convertendo R$${valor} para ${moeda}`;
 }
