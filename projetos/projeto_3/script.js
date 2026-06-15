@@ -15,10 +15,13 @@ function converter() {
         .then(response => response.json())
         .then(data => {
             console.log("API funcionando!");
+            const brl = data.data.BRL;
             const cotacao = data.data[moeda];
-            console.log(data);
+            console.log("BRL:", data.data.BRL);
             console.log("Moeda:", moeda);
             console.log("Cotação:", cotacao);
+            console.log(valor / brl);
+            console.log(valor / cotacao);
         });
     //parsefloat("")
     resultado.textContent = `Convertendo R$${valor} para ${moeda}`;
