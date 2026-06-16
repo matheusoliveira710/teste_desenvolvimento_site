@@ -3,6 +3,12 @@ function converter() {
     const valor = parseFloat(document.getElementById('valor').value);
     const moeda = document.getElementById('moeda').value;
     const resultado = document.getElementById('resultado');
+    const simbolos = {
+        USD: "$",
+        EUR: "€",
+        GBP: "£",
+        JPY: "¥"
+    };
     if (isNaN(valor)) {
         resultado.textContent = "Por favor, digite um valor válido em reais.";
         return;
@@ -20,6 +26,19 @@ function converter() {
             const valorEmUSD = valor / brl;
             const valorConvertido = valorEmUSD * cotacao;
             console.log(valorConvertido);
+            let simbolo = "";
+            if (moeda === "USD") {
+                simbolo = "$";
+            }
+            else if (moeda === "EUR") {
+                simbolo = "€";
+            }
+            else if (moeda === "GBP") {
+                simbolo = "£";
+            }
+            else if (moeda === "JPY") {
+                simbolo = "¥";
+            }
             console.log("BRL:", data.data.BRL);
             console.log("Moeda:", moeda);
             console.log("Cotação:", cotacao);
