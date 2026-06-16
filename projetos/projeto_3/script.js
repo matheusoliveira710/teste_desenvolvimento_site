@@ -42,6 +42,6 @@ function converter() {
             console.log("BRL:", data.data.BRL);
             console.log("Moeda:", moeda);
             console.log("Cotação:", cotacao);
-            resultado.textContent = `Convertendo R$${valor} para ${moeda}: ${valorConvertido.toFixed(2)}`;
+            resultado.textContent = `R$${valor} = ${simbolo}${valorConvertido.toFixed(2)}`;
         });
 }
