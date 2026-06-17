@@ -17,6 +17,9 @@ function converter() {
         resultado.textContent = "Erro, por favor selecione uma moeda!";
         return;
     }
+
+    resultado.textContent = "Carregando cotação ⏳...";
+
     fetch("https://api.freecurrencyapi.com/v1/latest?apikey=fca_live_0EnEK29NWnAECwYPtHdGqF3i1n6NGaWbd31TBx8t")
         .then(response => response.json())
         .then(data => {
