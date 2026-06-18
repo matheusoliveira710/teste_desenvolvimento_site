@@ -7,6 +7,96 @@ O projeto foi totalmente modularizado em pastas temáticas para garantir manuten
 📂 Estrutura do Repositório
 
 scripts-vm's/
+├── .github/workflows/         # CI/CD: Validação automatizada de sintaxe Bash
+├── .gitignore                 # Proteção contra vazamento de chaves e segredos
+├── LICENSE                    # Licença MIT Permissiva
+├── README.md                  # Documentação principal
+├── config.env.example         # Template para centralização de variáveis e IPs
+├── configurar_tudo.sh         # Orquestrador Mestre do ecossistema
+│
+├── Ajustes Físicos/
+│   └── hardware_energy.sh     # Otimização de energia para hardware real
+│
+├── Ambientes de Desenvolvimento/
+│   ├── instalar_docker.sh     # Setup do Docker Engine + Portainer CE
+│   ├── subir_bancos.sh        # Instâncias de bancos (Postgres/MySQL/Redis)
+│   └── derrubar_ambiente.sh   # Limpeza e liberação de recursos
+│
+├── Alta Disponibilidade/
+│   ├── setup_docker_swarm.sh  # Clusters nativos do Docker
+│   └── setup_k3s_master.sh    # Instalação simplificada de nós Kubernetes
+│
+├── Automations e CI-CD/
+│   ├── setup_ansible.sh       # Gerenciador de configuração Ansible
+│   └── setup_github_runner.sh # Runners para deploys automáticos
+│
+├── Banco de Dados e Persistência/
+│   ├── deploy_postgres.sh     # Cluster Postgres com volumes persistentes
+│   └── setup_pgadmin.sh       # Interface web para administração
+│
+├── Customização Estética/
+│   ├── cockpit-panel.sh       # Dashboard web para gerenciamento do SO
+│   └── custom_motd_ssh.sh     # MOTD dinâmico de boas-vindas
+│
+├── Discos/
+│   └── ssd_hd.sh              # Montagem definitiva no /etc/fstab
+│
+├── DNS Local e AdBlock/
+│   ├── deploy_pihole.sh       # Bloqueio de anúncios via DNS
+│   └── local_dns.sh           # Injeção de registros locais
+│
+├── Gerenciamento de Usuários/
+│   ├── criar_usuario.sh       # Criação com privilégios administrativos
+│   ├── importar_keys.sh       # Importação via GitHub
+│   └── check_privileges.sh    # Auditoria de sudo
+│
+├── Limpeza Automática/
+│   └── limpeza.sh             # Faxina de caches (APT), logs e containers
+│
+├── Logs e Diagnósticos/
+│   ├── check_hardware.sh      # Auditoria S.M.A.R.T e telemetria
+│   └── docker_logs.sh         # Leitura em tempo real de logs críticos
+│
+├── Media e Home Server/
+│   ├── setup_jellyfin.sh      # Servidor de mídia local
+│   └── setup_samba.sh         # Compartilhamento de arquivos (NAS)
+│
+├── Monitoramento/
+│   ├── setup_netdata.sh       # Telemetria e gráficos em tempo real
+│   └── alerta_disco.sh        # Gatilho de segurança de armazenamento
+│
+├── Notificações e Webhooks/
+│   ├── alerta_ssh.sh          # Notificações em acessos remotos
+│   └── notificar_status.sh    # Centralizador (Discord/Telegram)
+│
+├── Rede/
+│   ├── config_rede.sh         # IP Estático e DNS via Netplan
+│   ├── configurar_ufw.sh      # Hardening via Firewall
+│   └── speedtest.sh           # Registro de telemetria de rede
+│
+├── Redirecionamento e Proxy/
+│   └── setup_nginx_proxy.sh   # Proxy reverso com SSL automático
+│
+├── Segurança Dados/
+│   ├── backup_cron.sh         # Agendamento de diretórios
+│   ├── backup_banco.sh        # Dump de banco rotacionado
+│   └── backup_infra.sh        # Backup dos próprios scripts
+│
+├── Segredos e Criptografia/
+│   ├── encrypt_secrets.sh     # Encriptação AES-256 via GPG
+│   └── decrypt_secrets.sh     # Decodificação pós-deploy
+│
+└── Testes e Validação/
+    ├── validate_syntax.sh     # Varredura via ShellCheck
+    └── mock_deploy.sh         # Simulação Dry-Run🚀 DevOps & SysAdmin Automation Framework (scripts-vm's)
+
+Este repositório centraliza um framework completo de Infraestrutura como Código (IaC) e automação para provisionamento, segurança, monitoramento e manutenção de servidores Linux físicos ou ambientes virtualizados.
+
+O projeto foi totalmente modularizado em pastas temáticas para garantir manutenibilidade, permitindo o deploy de módulos específicos ou a orquestração completa através de um script mestre.
+
+📂 Estrutura do Repositório
+
+scripts-vm's/
 ├── .github/workflows/
 │   └── linter.yml                  # CI/CD: Validação automatizada de sintaxe Bash
 ├── .gitignore                      # Proteção contra vazamento de chaves e segredos
