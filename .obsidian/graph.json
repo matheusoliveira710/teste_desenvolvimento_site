@@ -1,0 +1,23 @@
+{
+    "collapse-filter": false,
+    "search": "",
+    "showTags": false,
+    "showAttachments": false,
+    "hideUnresolved": true,
+    "showOrphans": false,
+    "collapse-color-groups": false,
+    "colorGroups": [
+        {
+            "query": "file:Dashboard_ACVM",
+            "color": {
+                "a": 1,
+                "rgb": 14844006
+            }
+        }
+    ],
+    "collapse-forces": true,
+    "centerStrength": 0.3,
+    "repelStrength": 2.0,
+    "linkStrength": 0.8,
+    "linkDistance": 250
+}

@@ -1,3 +1,7 @@
+---
+dashboard: [[Dashboard_ACVM]]
+---
+
 🚀 DevOps & SysAdmin Automation Framework (scripts-vm's)
 
 Este repositório centraliza um framework completo de Infraestrutura como Código (IaC) e automação para provisionamento, segurança, monitoramento e manutenção de servidores Linux físicos ou ambientes virtualizados.
@@ -72,3 +76,7 @@ scripts-vm's/
 └── Testes e Validação/
     ├── validate_all_syntax.sh      # Varredura via ShellCheck
     └── mock_deploy.sh              # Simulação Dry-Run de orquestração
+
+
+# Conexão Central
+[[Dashboard_ACVM]]

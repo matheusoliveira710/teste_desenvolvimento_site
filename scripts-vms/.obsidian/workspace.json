@@ -1,0 +1,198 @@
+{
+  "main": {
+    "id": "f108f7def0bd4e41",
+    "type": "split",
+    "children": [
+      {
+        "id": "2a31a595839d55c6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c3662929dadd6f25",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "graph",
+              "state": {},
+              "pinned": true,
+              "icon": "lucide-git-fork",
+              "title": "Visualização em gráfico"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b8a58830ebedcfa8",
+    "type": "split",
+    "children": [
+      {
+        "id": "4ca19dfc477c135f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a828de8a0ad42ebf",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de arquivos"
+            }
+          },
+          {
+            "id": "9314038bc1a70e37",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Procurar"
+            }
+          },
+          {
+            "id": "3cd3ae21ba634441",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "right": {
+    "id": "b734d78c8374e17c",
+    "type": "split",
+    "children": [
+      {
+        "id": "a9b74811444b5aa3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d7d3eba47f006566",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Links inversos"
+            }
+          },
+          {
+            "id": "cda03ffc0eea3812",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Links de saída"
+            }
+          },
+          {
+            "id": "0b0b7257a2bfde7a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etiquetas"
+            }
+          },
+          {
+            "id": "06f871038d23d684",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Todas as propriedades"
+            }
+          },
+          {
+            "id": "5c9f18a7e0b5517e",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Sumário"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir a troca rápida": false,
+      "graph:Abrir visualização em gráfico": false,
+      "canvas:Criar novo canvas": false,
+      "daily-notes:Abrir a nota de hoje": false,
+      "templates:Inserir modelo": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Criar nova base": false
+    }
+  },
+  "active": "c3662929dadd6f25",
+  "lastOpenFiles": [
+    "teste_pafj_ativo.py",
+    "lib_pafj/teste_direto.py",
+    "lib_pafj/__pycache__/__init__.cpython-313.pyc",
+    "lib_pafj/__pycache__/sentinela.cpython-313.pyc",
+    "lib_pafj/__pycache__",
+    "lib_pafj/esca.py",
+    "lib_pafj/portal.py",
+    "lib_pafj/sentinela.py",
+    "lib_pafj/__init__.py",
+    "verificar_pafj.py",
+    "lib_pafj",
+    "Dashboard_ACVM.md",
+    "Rede/config_rede.md"
+  ]
+}
