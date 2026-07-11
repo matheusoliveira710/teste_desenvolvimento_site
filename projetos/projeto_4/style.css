@@ -1,6 +1,6 @@
 body {
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: #3a3737;
+    color: #ffffff;
 }
 
 h1 {
@@ -12,4 +12,53 @@ p {
     font-size: 18px;
     line-height: 1.6;
     margin: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto; /* Centraliza o formulário na tela */
+    padding: 20px;
+    background: rgb(221, 202, 202);
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra suave */
+}
+
+input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* Cor mais escura ao passar o mouse */
+    transform: scale(0.98); /* Efeito de 'click' no botão */
+}
+
+#mensagem-status {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    text-align: center;
+    display: none; /* Escondido por padrão */
+}
+
+/* Responsividade simples para mobile */
+@media (max-width: 600px) {
+    form {
+        width: 90%;
+        margin: 10px auto;
+    }
 }
