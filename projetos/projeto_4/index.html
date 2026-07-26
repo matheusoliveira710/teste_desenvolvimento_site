@@ -3,20 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Quadro de tarefas</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Meu Dashboard</h1>
-    <form id="formFinanceiro">
-        <input type="text" id="categoria" placeholder="Categoria (ex: Alimentação)" required>
-        <input type="number" id="valor" placeholder="Valor (R$)" step="0.01" required>
-        <button type="submit">Adicionar</button>
-    </form>
-    <div style="width: 400px; margin: 20px auto;">
-        <canvas id="meuGrafico"></canvas>
+    <header>
+        <h1>Matriz de Eisenhower</h1>
+        <p>Organize suas tarefas por Urgência e Importância</p>
+    </header>
+
+    <!-- Formulário -->
+    <div class="form-container">
+        <input type="text" id="taskInput" placeholder="O que precisa ser feito?">
+        <select id="quadrantSelect">
+            <option value="q1">🚨 Fazer (Urgente & Importante)</option>
+            <option value="q2">📅 Agendar (Não Urgente & Importante)</option>
+            <option value="q3">👥 Delegar (Urgente & Não Importante)</option>
+            <option value="q4">🗑️ Eliminar (Não Urgente & Não Importante)</option>
+        </select>
+        <button onclick="addTask()">Adicionar</button>
     </div>
-<script src="script.js"></script>
+
+    <!-- Matriz -->
+    <div class="matrix-grid">
+        <!-- Q1 -->
+        <div class="quadrant q1">
+            <h3>1. Fazer Agora</h3>
+            <p class="desc">Urgente e Importante (Crises, prazos)</p>
+            <ul id="list-q1" class="task-list"></ul>
+        </div>
+        <!-- Q2 -->
+        <div class="quadrant q2">
+            <h3>2. Agendar</h3>
+            <p class="desc">Não Urgente, mas Importante (Planejamento, saúde)</p>
+            <ul id="list-q2" class="task-list"></ul>
+        </div>
+        <!-- Q3 -->
+        <div class="quadrant q3">
+            <h3>3. Delegar</h3>
+            <p class="desc">Urgente, mas Não Importante (Interrupções, reuniões)</p>
+            <ul id="list-q3" class="task-list"></ul>
+        </div>
+        <!-- Q4 -->
+        <div class="quadrant q4">
+            <h3>4. Eliminar</h3>
+            <p class="desc">Não Urgente & Não Importante (Distrações, desperdício)</p>
+            <ul id="list-q4" class="task-list"></ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

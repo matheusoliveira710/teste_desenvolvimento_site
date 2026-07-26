@@ -1,34 +1,52 @@
-const ctx = document.getElementById('meuGrafico').getContext('2d');
-let meuGrafico = new Chart(ctx, {
-    type: 'pie',
-    data: {
-        labels: [],
-        datasets: [{
-            data: [],
-            backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0']
-        }]
-    }
-});
+// Carrega tarefas salvas ou inicia array vazio
+let tasks = JSON.parse(localStorage.getItem('eisenhower_tasks')) || [];
 
-document.getElementById('formFinanceiro').addEventListener('submit', function(e) {
-    e.preventDefault();
+function renderTasks() {
+    // Limpa as listas visuais
+    document.getElementById('list-q1').innerHTML = '';
+    document.getElementById('list-q2').innerHTML = '';
+    document.getElementById('list-q3').innerHTML = '';
+    document.getElementById('list-q4').innerHTML = '';
 
-    const categoria = document.getElementById('categoria').value;
-    
-    // Substitui vírgula por ponto e converte para decimal
-    const valorTexto = document.getElementById('valor').value.replace(',', '.');
-    const valor = parseFloat(valorTexto);
+    // Popula os quadrantes
+    tasks.forEach((task, index) => {
+        const li = document.createElement('li');
+        li.className = 'task-item';
+        li.innerHTML = `
+            <span>${task.text}</span>
+            <button onclick="deleteTask(${index})">✕</button>
+        `;
+        document.getElementById(`list-${task.quadrant}`).appendChild(li);
+    });
 
-    // Validação para garantir que é um número válido
-    if (isNaN(valor)) {
-        alert("Por favor, digite um valor numérico válido.");
+    // Salva no navegador
+    localStorage.setItem('eisenhower_tasks', JSON.stringify(tasks));
+}
+
+function addTask() {
+    const input = document.getElementById('taskInput');
+    const select = document.getElementById('quadrantSelect');
+    const text = input.value.trim();
+
+    if (text === '') {
+        alert('Digite uma descrição para a tarefa!');
         return;
     }
 
-    // Adiciona ao gráfico
-    meuGrafico.data.labels.push(categoria);
-    meuGrafico.data.datasets[0].data.push(valor);
-    
-    meuGrafico.update();
-    this.reset();
-});
+    tasks.push({
+        text: text,
+        quadrant: select.value
+    });
+
+    input.value = '';
+    input.focus();
+    renderTasks();
+}
+
+function deleteTask(index) {
+    tasks.splice(index, 1);
+    renderTasks();
+}
+
+// Renderiza ao carregar a página
+renderTasks();

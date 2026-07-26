@@ -1,64 +1,185 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 body {
-    background-color: #3a3737;
-    color: #ffffff;
-}
-
-h1 {
-    color: #007BFF;
-    text-align: center;
-}
-
-p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin: 20px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    margin: 0 auto; /* Centraliza o formulário na tela */
+    background-color: #f4f6f9;
+    color: #333;
     padding: 20px;
-    background: rgb(221, 202, 202);
-    border-radius: 8px; /* Bordas arredondadas */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra suave */
 }
 
-input {
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+header {
+    text-align: center;
+    margin-bottom: 25px;
 }
 
-button {
-    padding: 10px;
-    background-color: #007BFF;
+/* CORRIGIDO: Era p1 (tag inválida), mudado para h1 */
+header h1 {
+    color: #2c3e50;
+    margin-bottom: 5px;
+    font-size: 28px;
+}
+
+header p {
+    color: #7f8c8d;
+    font-size: 14px;
+}
+
+/* Formulário de Adição */
+.form-container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    max-width: 800px;
+    margin: 0 auto 25px auto;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.form-container input, .form-container select, .form-container button {
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    outline: none;
+    /* MELHORIA: Transição suave para foco */
+    transition: all 0.2s ease-in-out;
+}
+
+/* MELHORIA: Destaque visual moderno ao clicar no input */
+.form-container input:focus, .form-container select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+}
+
+.form-container input {
+    flex: 2;
+    min-width: 200px;
+}
+
+.form-container select {
+    flex: 1;
+    min-width: 150px;
+}
+
+.form-container button {
+    background-color: #3498db;
     color: white;
     border: none;
-    border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+    flex: 1;
+    min-width: 100px;
 }
 
-button:hover {
-    background-color: #0056b3; /* Cor mais escura ao passar o mouse */
-    transform: scale(0.98); /* Efeito de 'click' no botão */
+.form-container button:hover {
+    background-color: #2980b9;
 }
 
-#mensagem-status {
-    padding: 10px;
-    margin: 10px 0;
+/* Grid da Matriz (4 Quadrantes) */
+.matrix-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    max-width: 900px;
+    /* MELHORIA: Mudado de height fixo para min-height, evitando queijo estrutural */
+    min-height: 550px;
+    margin: 0 auto;
+}
+
+.quadrant {
+    background: white;
+    border-radius: 8px;
+    padding: 18px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    max-height: 350px; /* Evita que estoure verticalmente */
+}
+
+.quadrant h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #eee;
+}
+
+.quadrant p.desc {
+    font-size: 12px;
+    color: #7f8c8d;
+    margin-bottom: 12px;
+}
+
+/* Cores específicas para cada quadrante */
+.q1 h3 { border-color: #e74c3c; color: #c0392b; } 
+.q2 h3 { border-color: #3498db; color: #2980b9; } 
+.q3 h3 { border-color: #f39c12; color: #d35400; } 
+.q4 h3 { border-color: #95a5a6; color: #7f8c8d; } 
+
+/* Lista de Tarefas dentro dos quadrantes */
+.task-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.task-item {
+    background: #f8f9fa;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border-left: 4px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    /* MELHORIA: Pequena animação ao surgir */
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-4px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.q1 .task-item { border-left-color: #e74c3c; }
+.q2 .task-item { border-left-color: #3498db; }
+.q3 .task-item { border-left-color: #f39c12; }
+.q4 .task-item { border-left-color: #95a5a6; }
+
+.task-item button {
+    background: transparent;
+    border: none;
+    color: #94a3b8;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 4px 8px;
     border-radius: 4px;
-    text-align: center;
-    display: none; /* Escondido por padrão */
+    transition: all 0.2s;
 }
 
-/* Responsividade simples para mobile */
-@media (max-width: 600px) {
-    form {
-        width: 90%;
-        margin: 10px auto;
+/* MELHORIA: Botão de deletar ganha destaque limpo ao passar o mouse */
+.task-item button:hover {
+    background-color: #fee2e2;
+    color: #e74c3c;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .matrix-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        min-height: auto;
+    }
+    .quadrant {
+        max-height: 300px;
     }
 }

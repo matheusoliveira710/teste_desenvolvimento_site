@@ -1,0 +1,5 @@
+@echo off
+echo == Iniciando a build do Matriz Eisenhower para Windows...
+pyinstaller --noconsole --onefile app.py
+echo == Build concluida! O arquivo .exe esta na pasta 'dist'.
+pause
